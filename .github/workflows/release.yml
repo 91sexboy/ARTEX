@@ -92,6 +92,8 @@ jobs:
         run: sha256sum *.zip > SHA256SUMS
       - uses: softprops/action-gh-release@v2
         with:
+          tag_name: "v0.3.3"            # <--- 指定一个版本号名称
+          name: "ARTEX v0.3.3"
           files: |
             dist/*.zip
             dist/SHA256SUMS
